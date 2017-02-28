@@ -1,6 +1,9 @@
 # Learn-Distributed-Systems
-
 ## Context
+The course we're following is [MIT 6.824: Distributed Systems](https://pdos.csail.mit.edu/6.824/index.html). Here is the [course schedule](https://pdos.csail.mit.edu/6.824/schedule.html).
+
+
+## Motivation
 I found MIT 6.824 Distributed Systems is an fantastic course provided by MIT. It covers major components in Distributed Systems, such as MapReduce, GFS, ZooKeeper, etc. It also focuses on critical topics, such as fault tolerance, replication, consistency, etc. It picks several milestone papers as part of the course material. More surprisingly, the course lecture helps to explore critical questions in the paper and share understandings. I found some of the summarization are very insightful, from a industrial perspective.
 
 ## How will we use this
