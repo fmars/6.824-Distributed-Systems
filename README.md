@@ -14,7 +14,9 @@ I found MIT 6.824 Distributed Systems is an fantastic course provided by MIT. It
 
 ## More details
 - We create a folder for each lecture
-- For each paper we want to write down questions we have before reading lecture
+- For each paper we want to write down questions and answers we have before reading paper implementation. Basically try to come up with some idea what if we build such a system
+- For each paper we want to write down questions and answers we have before reading lecture material. Basically point out the interesting topics we want to discuss, and the elegant design we noticed.
+- For each paper we want to write down what we think after reading lecture material
 - For each lecture we want to write down the pearls we found 
 - For each extra material, such as Go tutorial, we create a separate space for discussion
 - Create per lab disucssion thread
