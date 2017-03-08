@@ -1,0 +1,55 @@
+package main
+
+import "golang.org/x/tour/tree"
+import "fmt"
+
+// Walk walks the tree t sending all values
+// from the tree to the channel ch.
+func Walk(t *tree.Tree, ch chan int) {
+	var s [] *tree.Tree
+	for t != nil || len(s) > 0 {
+		for t != nil {
+			s = append(s, t)
+			t = t.Left
+		}
+		if len(s) > 0 {
+			t = s[len(s) - 1]
+			s = s[:len(s) -1]
+			ch <- t.Value
+			t = t.Right
+		}
+	}
+	close(ch)			
+}
+	
+
+// Same determines whether the trees
+// t1 and t2 contain the same values.
+func Same(t1, t2 *tree.Tree) bool {
+	ch1 := make(chan int)
+	ch2 := make(chan int)
+	var sl1 [] int
+	var sl2 [] int
+	go Walk(t1, ch1)
+	go Walk(t2, ch2)
+	for c := range ch1 {
+		sl1 = append(sl1, c)
+	}
+	for c := range ch2 {
+		sl2 = append(sl2, c)
+	}
+	if len(sl1) != len(sl2) {
+		return false
+	}
+	for idx, val := range(sl1) {
+		if val != sl2[idx] {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	res := Same(tree.New(1), tree.New(1))
+	fmt.Println(res)
+}
