@@ -22,7 +22,7 @@ The answer is：
 		done.Add(1)
 		go func(u string) {
 			defer done.Done()
-			Crawl(u, depth-1, fetcher, c)
+			Crawl(u, fetcher, c)
 		}(u) // Without the u argument there is a race
 	}
 	done.Wait()
