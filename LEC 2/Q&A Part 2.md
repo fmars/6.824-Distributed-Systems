@@ -32,7 +32,6 @@ is the designers didn't want programs to pay for locking for a map
 that isn't shared by multiple goroutines.
 
 Q: Why does Go have pointers, instead of just object references?
-
 A: The designers of Go intended it to be used for systems programming,
 where the programmer often wants control of how things are stored and
 passed around. For example, Java passes integers, references, etc. by
