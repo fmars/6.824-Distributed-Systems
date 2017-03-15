@@ -26,3 +26,19 @@ The answer is：
 		}(u) // Without the u argument there is a race
 	}
 	done.Wait()
+
+Q: Why use channels？(I just know communication)
+
+A: Two goals: communication and synchronization.
+Unbuffered channels combine communication—the exchange of a value—with 
+synchronization—guaranteeing that two calculations (goroutines) are in
+a known state.
+Receivers always block until there is data to receive. If the channel 
+is unbuffered, the sender blocks until the receiver has received the 
+value. 
+
+Q: What is the different between defer done.Done() and done.Done() at 
+the end of this goroutine?
+
+A: defer done.Done() is finished at any return in this goroutine.
+If returned before done.Done() at the end, done will not -1.
