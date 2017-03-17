@@ -27,4 +27,4 @@ by mumu
     	- when is discard safe?——important question！
     	- crashes and re-starts?
 	- 3)"exactly once" at-most-once plus unbounded retries plus fault-tolerant service
-  Go RPC is "at most once" open TCP connection
+  - Go RPC is "at most once" open TCP connection
