@@ -21,7 +21,7 @@
   failures: lost packet, broken network, slow server, crashed server
   scheme: "at least once", "at most once" and "exactly once"
 	1)"at least once" go wrong sometimes, except specific examples
-	*2)"at most once": server RPC code detects duplicate requests, and returns previous reply instead of re-running handler. (unique client ID)
+	2)"at most once": server RPC code detects duplicate requests, and returns previous reply instead of re-running handler. (unique client ID)
 	when is discard safe?——important question！
 	crashes and re-starts?
 	3)"exactly once" at-most-once plus unbounded retries plus fault-tolerant service
